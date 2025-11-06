@@ -4,7 +4,6 @@ Ce programme a pour but de séparer une phrase en mots et de les stocker dans un
 PROBLEM:
 ---
 "Écrire un programme qui permet de saisir une phrase (chaîne) de taille maximum 25 caractères, puis mettre ces mots dans le tableau t1 et afficher le tableau."
-
 							
 # Example
   
