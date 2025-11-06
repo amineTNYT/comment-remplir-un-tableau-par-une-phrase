@@ -1,0 +1,59 @@
+Algorithme phrase-tableau
+#Programme principal qui transforme une phrase en tableau de mots
+
+p.p
+debut
+saisir(ch)          
+n<---nombre-mot(ch) #Calcul du nombre de mots dans la phrase
+remplir(t,n)
+afficher(t,n)       
+fin
+
+procédure saisir(@ch:chaine)
+
+debut
+repeter 
+lire(ch)        
+jusqu'a long(ch)<25  
+fin
+
+fonction nombre-mot(ch:chaine):entier
+#Calcule le nombre de mots dans une chaîne en comptant les espaces
+debut
+s<--1             #Initialisation à 1 (au moins 1 mot même sans espaces)
+pour i de 0 à long(ch)-1 faire
+si ch[i]="" alors  #Si on rencontre un espace
+s<--s+1     #On incrémente le compteur de mots
+finsi
+finpour
+retourner s          #Retourne le nombre total de mots
+fin
+
+TDOL
+┌────────────────────────────────────┬──────────────────────────┐
+│Objet                               │Nature / Type             │
+├────────────────────────────────────┼──────────────────────────┤
+│i,s                                 │entier                    │
+└────────────────────────────────────┴──────────────────────────┘
+
+Procédure Remplir(ch:chaine;T:tableau de chaine;n:entier)
+Début
+Pour i de 0 à n-2 faire                   #Traite les n-1 premiers mots
+      pos←position(" ",ch)                      #Trouve la position du premier espace
+      T[i]←sous_chaine(ch,1,pos-1)               #Extrait le mot avant l'espace
+      ch←effacer(ch,1,pos)                       #Supprime le mot traité de la chaîne
+FinPour
+T[n-1]←ch  #Le dernier mot restant va dans la dernière case du tableau
+Fin
+
+procédure affichage(t,n)
+Pour i de 0 à n-1 Faire
+     Écrire(T[i]) 
+FinPour
+Fin
+
+┌──────────────────────────────────┬────────────────────────┐
+│Objet                             │Nature / Type           │
+├──────────────────────────────────┼────────────────────────┤
+│i                                 │entier                  │
+└──────────────────────────────────┴────────────────────────┘
