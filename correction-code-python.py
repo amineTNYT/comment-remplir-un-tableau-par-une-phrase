@@ -7,6 +7,8 @@ def Calcule(ch):
             c = c + 1     
     return c  # Retourne le nombre total de mots
 
+
+#methode repeter jusqu'à
 def Remplir(ch, T):
     pos = ch.find(" ")                  # Trouve la position du premier espace
     N = 0                               # Indice pour remplir le tableau T
